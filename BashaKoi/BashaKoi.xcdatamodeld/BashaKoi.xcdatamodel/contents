@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName=".Address" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="addresses" inverseEntity="Area"/>
+    </entity>
+    <entity name="Area" representedClassName=".Area" syncable="YES" codeGenerationType="class">
+        <attribute name="area" attributeType="String"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Address" inverseName="parent" inverseEntity="Address"/>
+    </entity>
+    <elements>
+        <element name="Address" positionX="-289.89453125" positionY="-14.32421875" width="128" height="73"/>
+        <element name="Area" positionX="-530.71484375" positionY="-116.2578125" width="128" height="73"/>
+    </elements>
+</model>
